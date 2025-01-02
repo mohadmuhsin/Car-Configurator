@@ -80,6 +80,9 @@ function Canvas() {
     light.position.set(0, 35, 0)
     scene.add(light)  
     light.castShadow = true
+
+    const hemiSphereLight = new THREE.RectAreaLight(0xFFC87C,6)
+    scene.add(hemiSphereLight)
    
     //plane with texture
     nightTexture = new THREE.TextureLoader().load("/rubber_tiles_diff_4k.jpg");
